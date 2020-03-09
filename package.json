@@ -1,0 +1,19 @@
+{
+  "name": "ristky-api",
+  "version": "1.0.0",
+  "description": "Este es un proyecto para fomentar el uso de dinero electronico para dejar de contaminar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joscor34/Ristky-API.git"
+  },
+  "author": "Jose Eduardo Esteva Cordova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joscor34/Ristky-API/issues"
+  },
+  "homepage": "https://github.com/joscor34/Ristky-API#readme"
+}
