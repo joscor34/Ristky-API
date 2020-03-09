@@ -1,10 +1,6 @@
 # Ristky API
 
-***
-
 ## Configuración
-
-***
 
 Para poder empezar a utilizar el proyecto lo unico que tienes que hacer para instalar todo es:
 
