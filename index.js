@@ -1,22 +1,19 @@
-const express = require('express')
+// Importamos las librerias necesarias
 const colors = require('colors')
+const mongoose = require('mongoose')
 
-var port = 8080
+// Importamos la configacion de la API
+const app = require('./app') 
 
-const app = express()
+// Configuramos nuestro archivo .env
+require('dotenv').config()
 
-app.get('/', (req, res) => {
-  console.log('Todo okay')
-  res.status(200)
-  res.json({ Hola: 'Bien hecho '})
-})
+var port = process.env.PORT
 
-app.get('/1', (req, res) => {
-  console.log('Todo okay 1')
-  res.status(200)
-  res.json({ Hola: 'Bien hecho 1'})
-})
-
-app.listen(port, () => {
-  console.log(colors.green('Tu servidor esta corriendo en: ') + colors.bgCyan(`http://localhost:${port}`))
-})
+async function connect () {
+  await mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true})
+  app.listen(port, () => {
+    console.log(colors.green('Tu servidor esta corriendo en: ') + colors.bgCyan(`http://localhost:${port}`))
+  })
+}
+connect()
